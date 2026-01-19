@@ -33,13 +33,13 @@ ng serve</code></pre>
 
             <div class="font-semibold text-xl mb-4">Menu</div>
             <p class="text-lg mb-4">
-                Main menu is defined at <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/layout/component/app.menu.ts</span> file. Update the
+                Main menu is defined at <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/core/layout/component/app.menu.ts</span> file. Update the
                 <i class="bg-highlight px-2 py-1 rounded-border not-italic text-base">model</i> property to define your own menu items.
             </p>
 
             <div class="font-semibold text-xl mb-4">Layout Service</div>
             <p class="text-lg mb-4">
-                <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/layout/service/layout.service.ts</span> is a service that manages layout state changes, including dark mode, PrimeNG theme, menu modes, and states.
+                <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/core/layout/service/layout.service.ts</span> is a service that manages layout state changes, including dark mode, PrimeNG theme, menu modes, and states.
             </p>
 
             <div class="font-semibold text-xl mb-4">Tailwind CSS</div>
