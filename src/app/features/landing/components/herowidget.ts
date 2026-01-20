@@ -4,6 +4,8 @@ import { RippleModule } from 'primeng/ripple';
 
 @Component({
     selector: 'hero-widget',
+    
+    standalone: true,
     imports: [ButtonModule, RippleModule],
     templateUrl: './herowidget.html'
 })

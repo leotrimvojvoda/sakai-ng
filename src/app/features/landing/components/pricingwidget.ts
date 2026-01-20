@@ -5,6 +5,8 @@ import { RippleModule } from 'primeng/ripple';
 
 @Component({
     selector: 'pricing-widget',
+    
+    standalone: true,
     imports: [DividerModule, ButtonModule, RippleModule],
     templateUrl: './pricingwidget.html'
 })

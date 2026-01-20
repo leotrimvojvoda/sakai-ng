@@ -7,6 +7,8 @@ import {CommonModule} from "@angular/common";
 
 @Component({
     selector: 'app-floating-configurator',
+    
+    standalone: true,
     imports: [CommonModule, ButtonModule, StyleClassModule, AppConfigurator],
     templateUrl: './app.floatingconfigurator.html'
 })

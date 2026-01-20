@@ -7,6 +7,8 @@ import { AppFloatingConfigurator } from "@/core/layout/component/app.floatingcon
 
 @Component({
     selector: 'topbar-widget',
+    
+    standalone: true,
     imports: [RouterModule, StyleClassModule, ButtonModule, RippleModule, AppFloatingConfigurator],
     templateUrl: './topbarwidget.component.html'
 })

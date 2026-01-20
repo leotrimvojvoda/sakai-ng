@@ -3,6 +3,8 @@ import { Router, RouterModule } from '@angular/router';
 
 @Component({
     selector: 'footer-widget',
+    
+    standalone: true,
     imports: [RouterModule],
     templateUrl: './footerwidget.html'
 })
