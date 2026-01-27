@@ -1,8 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+import { CreateAccountCredentials, LoginCredentials } from '../models/auth.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Auth {
-  
+export class AuthService {
+  private http = inject(HttpClient);
+
+  login(credentials: LoginCredentials) {
+    return this.http.post(`${environment.apiUrl}/auth/login`, credentials);
+  }
+
+  register(credentials: CreateAccountCredentials) {
+    return this.http.post(`${environment.apiUrl}/auth/register`, credentials);
+  }
 }
