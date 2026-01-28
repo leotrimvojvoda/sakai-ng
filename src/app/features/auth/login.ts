@@ -12,6 +12,8 @@ import { LoginCredentials } from '../../core/models/auth.model';
 
 import { CommonModule } from '@angular/common';
 
+import { JwtService } from '../../core/services/jwt.service';
+
 @Component({
     selector: 'app-login',
     standalone: true,
@@ -28,13 +30,17 @@ export class Login {
     error: string | null = null;
 
     private authService = inject(AuthService);
+    private jwtService = inject(JwtService);
     private router = inject(Router);
 
     onSignIn() {
         this.error = null;
         this.authService.login(this.credentials).subscribe({
-            next: (response) => {
+            next: (response: any) => {
                 console.log('Login successful', response);
+                if (response && response.token) {
+                    this.jwtService.saveToken(response.token);
+                }
                 this.router.navigate(['/']);
             },
             error: (error) => {
